@@ -1,0 +1,25 @@
+﻿@model List<HtmlHelpers.Models.OrderSummaryViewModel>
+@{
+    ViewBag.Title = "OrderSummary";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>OrderSummary</h2>
+<table class="table">
+    <thead class="thead-default">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Username</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var order in Model)
+    {
+        <tr>
+            <td>@order.OrderId</td>
+            <td>@order.Description</td>
+            <td>@order.Quantity</td>
+        </tr>
+    }
+    </tbody>
+</table>
